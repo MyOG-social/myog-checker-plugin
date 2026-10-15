@@ -10,14 +10,14 @@ The plugin provides the `check_og_metadata` MCP tool and a
 Requires Node.js 22.19.0 or later and npm. No MyOG account, API key or
 subscription is needed.
 
-[Privacy](https://github.com/hboon/myog-checker-plugin#network-and-privacy) · [Support](https://github.com/hboon/myog-checker-plugin/issues)
+[Privacy](https://github.com/MyOG-social/myog-checker-plugin#network-and-privacy) · [Support](https://github.com/MyOG-social/myog-checker-plugin/issues)
 
 ## Install
 
 For Claude Code, add this marketplace and install its plugin:
 
 ```text
-/plugin marketplace add hboon/myog-checker-plugin
+/plugin marketplace add MyOG-social/myog-checker-plugin
 /plugin install myog-checker@myog-checker-plugins
 ```
 
@@ -89,7 +89,7 @@ The plugin skill is an MCP-only adaptation of the usage guide bundled in
 `myog-checker@0.1.1`.
 
 Report bugs or security concerns through
-[the repository's issues](https://github.com/hboon/myog-checker-plugin/issues).
+[the repository's issues](https://github.com/MyOG-social/myog-checker-plugin/issues).
 
 [MyOG.social](https://myog.social) also provides hosted image generation. That
 service is separate from this local metadata checker.

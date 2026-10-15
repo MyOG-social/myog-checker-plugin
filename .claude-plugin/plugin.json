@@ -5,8 +5,8 @@
   "description": "Check a public page's static Open Graph and Twitter metadata from your machine.",
   "author": { "name": "MyOG.social", "url": "https://myog.social" },
   "homepage": "https://myog.social",
-  "privacyPolicyUrl": "https://github.com/hboon/myog-checker-plugin#network-and-privacy",
-  "repository": "https://github.com/hboon/myog-checker-plugin",
+  "privacyPolicyUrl": "https://github.com/MyOG-social/myog-checker-plugin#network-and-privacy",
+  "repository": "https://github.com/MyOG-social/myog-checker-plugin",
   "license": "MIT",
   "keywords": ["myog", "open-graph", "twitter-card", "metadata", "link-preview"]
 }
