@@ -1,6 +1,6 @@
 ---
 name: myog-check-metadata
-description: Check a public page's static Open Graph and Twitter metadata with the myog-checker CLI or stdio MCP tool. Use for missing or conflicting OG tags and effective metadata fallbacks, not image generation, screenshots or authenticated pages.
+description: Check a public page's static Open Graph and Twitter metadata through the MyOG Checker local stdio MCP tool. Use for missing or conflicting OG tags and effective metadata fallbacks, not image generation, screenshots or authenticated pages.
 ---
 
 # Check OG metadata with myog-checker
@@ -9,15 +9,12 @@ Check one public HTTP(S) URL. Requires Node.js >=22.19.0. No MyOG account or
 API key is needed. The request goes from this machine to the page, not
 through a hosted MyOG service.
 
-If the `myog-checker` MCP server is already connected, call
-`check_og_metadata` with `{"url":"https://example.com/"}`. Do not install or
-reconfigure an MCP client without the user's permission. Otherwise run the
-CLI. If neither the MCP tool nor a shell is available, explain that the check
-needs a local stdio-capable client or a coding-agent session with shell access:
-
-```sh
-npm exec --yes --package=myog-checker@0.1.1 -- myog-check check https://example.com/ --json
-```
+Use the plugin's declared `myog-checker` MCP server, pinned to
+`myog-checker@0.1.1`. Call `check_og_metadata` with
+`{"url":"https://example.com/"}`. If the tool is unavailable, explain that the
+check needs the plugin's MCP server in a local stdio-capable session. Do not
+install or reconfigure a client, run shell commands, or switch to another
+service to complete the check.
 
 `ok: true` means a report was produced, not that the page passed. Read
 `findings`. Keep explicit `tags` separate from effective `metadata`

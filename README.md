@@ -10,6 +10,8 @@ The plugin provides the `check_og_metadata` MCP tool and a
 Requires Node.js 22.19.0 or later and npm. No MyOG account, API key or
 subscription is needed.
 
+[Privacy](https://github.com/hboon/myog-checker-plugin#network-and-privacy) · [Support](https://github.com/hboon/myog-checker-plugin/issues)
+
 ## Install
 
 For Claude Code, add this marketplace and install its plugin:
@@ -44,9 +46,20 @@ For a direct CLI check:
 npm exec --yes --package=myog-checker@0.1.1 -- myog-check check https://example.com/ --json
 ```
 
+The CLI command is for manual use. The plugin skill uses only its declared
+MCP server and does not run a shell fallback.
+
 `ok: true` means a report was produced. A report can still contain findings.
 Read them. Reported image URLs do not prove the images load or have suitable
 dimensions.
+
+Example requests for your agent:
+
+- Check `https://example.com/` and list its Open Graph and Twitter tags.
+- Check `https://example.com/` for missing, duplicate or conflicting metadata
+  and report the HTTP status.
+- Check `https://example.com/` and explain which values came from fallbacks
+  and which checks the tool did not perform.
 
 ## Network and privacy
 
@@ -71,6 +84,12 @@ also MIT. Its tarball contains readable, unminified JavaScript and its license;
 the upstream TypeScript workspace is not included in this plugin repository.
 Runtime dependencies are pinned in the npm manifest. See the package README
 for the complete limits and error contract.
+
+The plugin skill is an MCP-only adaptation of the usage guide bundled in
+`myog-checker@0.1.1`.
+
+Report bugs or security concerns through
+[the repository's issues](https://github.com/hboon/myog-checker-plugin/issues).
 
 [MyOG.social](https://myog.social) also provides hosted image generation. That
 service is separate from this local metadata checker.
