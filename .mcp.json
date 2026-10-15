@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "myog-checker": {
+      "command": "npm",
+      "args": [
+        "exec",
+        "--yes",
+        "--package=myog-checker@0.1.1",
+        "--",
+        "myog-check-mcp"
+      ]
+    }
+  }
+}

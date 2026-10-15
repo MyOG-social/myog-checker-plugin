@@ -1,0 +1,8 @@
+{
+  "name": "myog-checker-plugins",
+  "metadata": {
+    "description": "MyOG's local metadata checker plugin and usage skill."
+  },
+  "owner": { "name": "MyOG.social" },
+  "plugins": [{ "name": "myog-checker", "source": "./" }]
+}

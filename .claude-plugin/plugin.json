@@ -1,0 +1,10 @@
+{
+  "name": "myog-checker",
+  "version": "0.1.1",
+  "description": "Check a public page's static Open Graph and Twitter metadata from your machine.",
+  "author": { "name": "MyOG.social", "url": "https://myog.social" },
+  "homepage": "https://myog.social",
+  "repository": "https://github.com/hboon/myog-checker-plugin",
+  "license": "MIT",
+  "keywords": ["myog", "open-graph", "twitter-card", "metadata", "link-preview"]
+}
