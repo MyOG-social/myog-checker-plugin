@@ -11,7 +11,9 @@ through a hosted MyOG service.
 
 Use the plugin's declared `myog-checker` MCP server, pinned to
 `myog-checker@0.1.1`. Call `check_og_metadata` with
-`{"url":"https://example.com/"}`. If the tool is unavailable, explain that the
+`{"url":"https://example.com/"}`. The server runs one check at a time and
+returns `busy` for a concurrent call, so check several URLs sequentially,
+waiting for each result. If the tool is unavailable, explain that the
 check needs the plugin's MCP server in a local stdio-capable session. Do not
 install or reconfigure a client, run shell commands, or switch to another
 service to complete the check.
