@@ -30,6 +30,32 @@ The local MCP server runs in Claude Code and local-capable sessions. A chat
 session that cannot launch a local command cannot run the checker. The skill
 explains this limit. This repository does not change global client settings.
 
+### VS Code
+
+[Open in VS Code](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522myog-checker%2522%252C%2522type%2522%253A%2522stdio%2522%252C%2522command%2522%253A%2522npm%2522%252C%2522args%2522%253A%255B%2522exec%2522%252C%2522--yes%2522%252C%2522--package%253Dmyog-checker%25400.1.1%2522%252C%2522--%2522%252C%2522myog-check-mcp%2522%255D%257D) to review the command before installing.
+
+To configure the server manually for local Copilot sessions in VS Code, use
+the JSON below in `~/.copilot/mcp-config.json` (or `$COPILOT_HOME/mcp-config.json`
+if `COPILOT_HOME` is set). If the file already exists, add the `myog-checker`
+entry under `mcpServers`. Make sure `npm` is on the local PATH.
+
+```json
+{
+  "mcpServers": {
+    "myog-checker": {
+      "type": "stdio",
+      "command": "npm",
+      "args": ["exec", "--yes", "--package=myog-checker@0.1.1", "--", "myog-check-mcp"],
+      "tools": ["check_og_metadata"]
+    }
+  }
+}
+```
+
+Select the Copilot harness in a local chat and ask it to run
+`check_og_metadata` on a public URL. Server availability can depend on your
+organization's policy. [VS Code MCP configuration reference](https://code.visualstudio.com/docs/agents/reference/mcp-configuration)
+
 ## Launch and use
 
 Both client manifests launch this pinned command:
